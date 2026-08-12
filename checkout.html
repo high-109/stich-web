@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luxe Retail - Product Listing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#293040",
+                    "surface-bright": "#f9f9ff",
+                    "tertiary": "#0e3427",
+                    "on-secondary-container": "#626566",
+                    "tertiary-fixed": "#c3ecd7",
+                    "on-tertiary-fixed-variant": "#294e3f",
+                    "on-primary-fixed": "#002117",
+                    "on-primary-container": "#80bea6",
+                    "surface-variant": "#dce2f7",
+                    "on-primary": "#ffffff",
+                    "surface": "#f9f9ff",
+                    "on-tertiary-fixed": "#002115",
+                    "on-background": "#141b2b",
+                    "surface-container-high": "#e1e8fd",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#95d3ba",
+                    "surface-tint": "#2b6954",
+                    "secondary-fixed": "#e1e3e4",
+                    "surface-dim": "#d3daef",
+                    "secondary": "#5c5f60",
+                    "outline": "#707974",
+                    "surface-container": "#e9edff",
+                    "on-secondary-fixed": "#191c1d",
+                    "primary-fixed": "#b0f0d6",
+                    "primary-fixed-dim": "#95d3ba",
+                    "inverse-on-surface": "#edf0ff",
+                    "primary": "#003527",
+                    "on-primary-fixed-variant": "#0b513d",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#f1f3ff",
+                    "surface-container-highest": "#dce2f7",
+                    "primary-container": "#064e3b",
+                    "background": "#f9f9ff",
+                    "secondary-fixed-dim": "#c5c7c8",
+                    "on-surface-variant": "#404944",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#274b3c",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "on-tertiary-container": "#93baa7",
+                    "on-surface": "#141b2b",
+                    "outline-variant": "#bfc9c3",
+                    "tertiary-fixed-dim": "#a8cfbc",
+                    "on-secondary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#454748",
+                    "secondary-container": "#e1e3e4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "stack-md": "16px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "section-gap": "80px",
+                    "stack-lg": "32px",
+                    "margin-desktop": "64px",
+                    "stack-sm": "8px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "display-lg-mobile": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "14px", "fontWeight": "500"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-inverse-surface sticky top-0 w-full z-50 border-b border-outline-variant dark:border-outline">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+<!-- Brand Logo -->
+<a class="text-headline-md font-headline-md tracking-tighter text-primary dark:text-primary-fixed" href="#">LUXE RETAIL</a>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden md:flex space-x-gutter">
+<a class="font-label-md text-label-md text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1" href="#">Shop All</a>
+<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors hover:bg-surface-container-low dark:hover:bg-surface-variant duration-200 ease-in-out px-2 py-1 rounded" href="#">New Arrivals</a>
+<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors hover:bg-surface-container-low dark:hover:bg-surface-variant duration-200 ease-in-out px-2 py-1 rounded" href="#">Collections</a>
+<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors hover:bg-surface-container-low dark:hover:bg-surface-variant duration-200 ease-in-out px-2 py-1 rounded" href="#">Journal</a>
+</div>
+<!-- Trailing Icons -->
+<div class="flex items-center space-x-stack-md text-primary dark:text-primary-fixed">
+<button class="hover:bg-surface-container-low dark:hover:bg-surface-variant p-2 rounded-full transition-all duration-200 ease-in-out"><span class="material-symbols-outlined" data-icon="search">search</span></button>
+<button class="hover:bg-surface-container-low dark:hover:bg-surface-variant p-2 rounded-full transition-all duration-200 ease-in-out"><span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span></button>
+<button class="hover:bg-surface-container-low dark:hover:bg-surface-variant p-2 rounded-full transition-all duration-200 ease-in-out"><span class="material-symbols-outlined" data-icon="person">person</span></button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg w-full flex flex-col md:flex-row gap-gutter">
+<!-- Sidebar Filters -->
+<aside class="w-full md:w-64 flex-shrink-0 mb-stack-lg md:mb-0">
+<h2 class="font-headline-sm text-headline-sm mb-stack-md">Filters</h2>
+<div class="space-y-stack-md border-t border-outline-variant pt-stack-md">
+<h3 class="font-label-md text-label-md mb-stack-sm">Category</h3>
+<ul class="space-y-2">
+<li><label class="flex items-center space-x-2"><input class="form-checkbox text-primary border-outline-variant rounded DEFAULT" type="checkbox"/> <span class="font-body-sm text-body-sm">All Clothing</span></label></li>
+<li><label class="flex items-center space-x-2"><input class="form-checkbox text-primary border-outline-variant rounded DEFAULT" type="checkbox"/> <span class="font-body-sm text-body-sm">Dresses</span></label></li>
+<li><label class="flex items-center space-x-2"><input class="form-checkbox text-primary border-outline-variant rounded DEFAULT" type="checkbox"/> <span class="font-body-sm text-body-sm">Tops</span></label></li>
+<li><label class="flex items-center space-x-2"><input class="form-checkbox text-primary border-outline-variant rounded DEFAULT" type="checkbox"/> <span class="font-body-sm text-body-sm">Outerwear</span></label></li>
+</ul>
+</div>
+<div class="space-y-stack-md border-t border-outline-variant pt-stack-md mt-stack-md">
+<h3 class="font-label-md text-label-md mb-stack-sm">Price</h3>
+<ul class="space-y-2">
+<li><label class="flex items-center space-x-2"><input class="form-checkbox text-primary border-outline-variant rounded DEFAULT" type="checkbox"/> <span class="font-body-sm text-body-sm">Under $100</span></label></li>
+<li><label class="flex items-center space-x-2"><input class="form-checkbox text-primary border-outline-variant rounded DEFAULT" type="checkbox"/> <span class="font-body-sm text-body-sm">$100 - $250</span></label></li>
+<li><label class="flex items-center space-x-2"><input class="form-checkbox text-primary border-outline-variant rounded DEFAULT" type="checkbox"/> <span class="font-body-sm text-body-sm">$250 - $500</span></label></li>
+<li><label class="flex items-center space-x-2"><input class="form-checkbox text-primary border-outline-variant rounded DEFAULT" type="checkbox"/> <span class="font-body-sm text-body-sm">Over $500</span></label></li>
+</ul>
+</div>
+</aside>
+<!-- Product Grid Area -->
+<div class="flex-grow">
+<!-- Breadcrumbs & Sorting -->
+<div class="flex justify-between items-end mb-stack-lg">
+<nav aria-label="Breadcrumb" class="flex text-on-surface-variant font-body-sm text-body-sm">
+<ol class="inline-flex items-center space-x-1 md:space-x-3">
+<li class="inline-flex items-center">
+<a class="hover:text-primary hover:underline" href="#">Home</a>
+</li>
+<li>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-sm mx-1">chevron_right</span>
+<a class="hover:text-primary hover:underline" href="#">Women</a>
+</div>
+</li>
+<li aria-current="page">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-sm mx-1">chevron_right</span>
+<span class="text-primary font-medium">Shop All</span>
+</div>
+</li>
+</ol>
+</nav>
+<div class="flex items-center space-x-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sort by:</span>
+<select class="form-select font-body-sm text-body-sm border-outline-variant rounded DEFAULT py-1 pl-2 pr-8 bg-surface focus:ring-primary focus:border-primary">
+<option>Recommended</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Newest Arrivals</option>
+</select>
+</div>
+</div>
+<!-- Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="group cursor-pointer flex flex-col relative bg-surface-container-lowest rounded-lg border border-outline-variant overflow-hidden hover:shadow-[0_10px_25px_rgba(0,0,0,0.05)] transition-all duration-300">
+<div class="aspect-[4/5] w-full overflow-hidden relative bg-surface-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A minimalist flat lay of a luxurious silk blouse in a soft cream color, resting on a clean white marble surface. Bright, high-key studio lighting casts soft shadows, emphasizing the smooth texture of the fabric. The overall mood is elegant, modern, and high-end, fitting a premium retail aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBodMmS57HwwQt2ttNgiJEh-FsqfB-9IJJD1sTANakonvtue_HTPq4TJUTNXulH3Impz06Uc5qClfxUz9bI_wBkH2K1i3ftdpFAHQfnDv1-STZ-v93vz9iiGCUGn1Wtihw5zn5gCRZlXTNMvRIYDrr3Yrpcqm8KAp-gFDjeNskNM49TRW1_sn8fycOTfeKTndZl8qYxUvsuA4Woo2AclvOq5Mf-8j3FDJT6-c8tHI2ZWW_CCunJ7LYK"/>
+<div class="absolute inset-x-0 bottom-0 p-unit translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out flex justify-center">
+<button class="bg-primary text-on-primary font-label-md text-label-md py-2 px-4 rounded w-full hover:bg-tertiary shadow-sm">Quick Add</button>
+</div>
+</div>
+<div class="p-stack-sm flex flex-col flex-grow">
+<span class="font-body-sm text-body-sm text-secondary mb-1">Tops</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 mb-1">Silk Crepe Blouse</h3>
+<div class="flex justify-between items-end mt-auto pt-2">
+<span class="font-body-md text-body-md font-semibold text-primary">$295</span>
+<div class="flex items-center text-primary-container">
+<span class="material-symbols-outlined text-[14px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm ml-1">4.8</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group cursor-pointer flex flex-col relative bg-surface-container-lowest rounded-lg border border-outline-variant overflow-hidden hover:shadow-[0_10px_25px_rgba(0,0,0,0.05)] transition-all duration-300">
+<div class="absolute top-2 left-2 z-10">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm px-2 py-1 rounded-sm uppercase tracking-wider">New</span>
+</div>
+<div class="aspect-[4/5] w-full overflow-hidden relative bg-surface-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A stylish model wearing a tailored wool overcoat in deep charcoal grey, standing against a stark white studio backdrop. The lighting is crisp and directional, highlighting the sharp lines and high-quality construction of the coat. The composition is fashion-forward, clean, and embodies a sophisticated luxury brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzNumepvH7QwsAEwOEovPmPL4Z_VJljjdAP9-IRm7qwrqWXXXDhyIjArgytpHo3z8qSxCLaWvMHTXZ6PkKrh_9YBQycpY6VV6e_obENISxVtqQuPki6XR15GkA3P-LY-0ollGcgVMF9zZmxIqgo5OKa-On193rGTRoIJx8MWQS1pNaTjWG_JQ03FhZ6LfPOn6-oibifhYlrTl7TxF1e14ToonC_XIa6gIeEOwhIjBsmxL2KIuu0L16"/>
+<div class="absolute inset-x-0 bottom-0 p-unit translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out flex justify-center">
+<button class="bg-primary text-on-primary font-label-md text-label-md py-2 px-4 rounded w-full hover:bg-tertiary shadow-sm">Quick Add</button>
+</div>
+</div>
+<div class="p-stack-sm flex flex-col flex-grow">
+<span class="font-body-sm text-body-sm text-secondary mb-1">Outerwear</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 mb-1">Tailored Wool Coat</h3>
+<div class="flex justify-between items-end mt-auto pt-2">
+<span class="font-body-md text-body-md font-semibold text-primary">$850</span>
+<div class="flex items-center text-primary-container">
+<span class="material-symbols-outlined text-[14px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm ml-1">5.0</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group cursor-pointer flex flex-col relative bg-surface-container-lowest rounded-lg border border-outline-variant overflow-hidden hover:shadow-[0_10px_25px_rgba(0,0,0,0.05)] transition-all duration-300">
+<div class="aspect-[4/5] w-full overflow-hidden relative bg-surface-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A close-up shot of an elegant leather handbag in rich camel brown, resting on a minimalist pedestal. Soft, diffuse lighting enhances the natural grain of the leather and the shine of the gold hardware. The background is a pale, neutral beige, creating a cohesive, high-end retail visual." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxXnr9xtVTH1DZDyV2Bw49KtvUtx9YRjiF_lD43FTaaHiESMFQdKuOuplJ8BYVnMzIVjTswBIRfjNygK0t7yiGx8MeSD2qnz-M6ly4jxn1PIcqVizGftjkRnVUjmqzh6NB-Sdd4FT5uJ0dTo-iwfvUphTKelCiq50EPZELXIGT-pcY0TCzrGQvPdk0SMP5D8sabCBxdQKdy_c0VP5Ij3pIs6oerP3R1ULZD4Qa2b0w86w0SvvQ-hOW"/>
+<div class="absolute inset-x-0 bottom-0 p-unit translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out flex justify-center">
+<button class="bg-primary text-on-primary font-label-md text-label-md py-2 px-4 rounded w-full hover:bg-tertiary shadow-sm">Quick Add</button>
+</div>
+</div>
+<div class="p-stack-sm flex flex-col flex-grow">
+<span class="font-body-sm text-body-sm text-secondary mb-1">Accessories</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 mb-1">Classic Leather Tote</h3>
+<div class="flex justify-between items-end mt-auto pt-2">
+<span class="font-body-md text-body-md font-semibold text-primary">$495</span>
+<div class="flex items-center text-primary-container">
+<span class="material-symbols-outlined text-[14px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm ml-1">4.9</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group cursor-pointer flex flex-col relative bg-surface-container-lowest rounded-lg border border-outline-variant overflow-hidden hover:shadow-[0_10px_25px_rgba(0,0,0,0.05)] transition-all duration-300">
+<div class="aspect-[4/5] w-full overflow-hidden relative bg-surface-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A pair of sleek, modern sunglasses with thin gold frames and dark gradient lenses, displayed on a smooth white acrylic block. The setting is bright and clinical, with sharp reflections on the lenses conveying premium quality. The minimalist composition speaks to a refined, luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWzeajjWvLV5-9mbf_FFh1JhBelTB3_pQrqdx0OCFPydPgvFLxxsq4xCxW-7H3itlk7YjFy423VSVGKvr_dzmwXx1bNIKP0Imwf7xGnnURJyXMNfBsRTUrG3t7nMTF4H9b9naQ2Th03D3f_hHWJsZdfpfoDUVrnURMu1srBjihgm7xRYs60BJsixpywHZ17K8hGoBG00LHypCeqpkeeHf-jWrKRDQicHOC2PJCvOJRIlzDnOV3lzt8"/>
+<div class="absolute inset-x-0 bottom-0 p-unit translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out flex justify-center">
+<button class="bg-primary text-on-primary font-label-md text-label-md py-2 px-4 rounded w-full hover:bg-tertiary shadow-sm">Quick Add</button>
+</div>
+</div>
+<div class="p-stack-sm flex flex-col flex-grow">
+<span class="font-body-sm text-body-sm text-secondary mb-1">Eyewear</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 mb-1">Aviator Sunglasses</h3>
+<div class="flex justify-between items-end mt-auto pt-2">
+<span class="font-body-md text-body-md font-semibold text-primary">$210</span>
+<div class="flex items-center text-primary-container">
+<span class="material-symbols-outlined text-[14px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm ml-1">4.5</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center mt-section-gap">
+<button class="font-label-md text-label-md text-primary border border-primary px-6 py-2 rounded hover:bg-surface-container-low transition-colors">Load More</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-inverse-surface w-full mt-section-gap bg-surface-container-highest dark:bg-surface-container-high border-t border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-desktop py-16 grid grid-cols-1 md:grid-cols-4 gap-stack-lg">
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed block mb-stack-md">LUXE RETAIL</span>
+<p class="font-body-sm text-body-sm text-secondary dark:text-secondary-fixed-dim">Elevating everyday essentials with modern minimalism and premium craftsmanship.</p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary dark:text-primary-fixed font-semibold mb-stack-sm">Shop</h4>
+<ul class="space-y-2 font-body-sm text-body-sm">
+<li><a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:underline decoration-1 underline-offset-4 transition-all duration-300" href="#">New Arrivals</a></li>
+<li><a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:underline decoration-1 underline-offset-4 transition-all duration-300" href="#">Best Sellers</a></li>
+<li><a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:underline decoration-1 underline-offset-4 transition-all duration-300" href="#">Collections</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary dark:text-primary-fixed font-semibold mb-stack-sm">Help</h4>
+<ul class="space-y-2 font-body-sm text-body-sm">
+<li><a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:underline decoration-1 underline-offset-4 transition-all duration-300" href="#">Shipping &amp; Returns</a></li>
+<li><a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:underline decoration-1 underline-offset-4 transition-all duration-300" href="#">Size Guide</a></li>
+<li><a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:underline decoration-1 underline-offset-4 transition-all duration-300" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary dark:text-primary-fixed font-semibold mb-stack-sm">Legal</h4>
+<ul class="space-y-2 font-body-sm text-body-sm">
+<li><a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:underline decoration-1 underline-offset-4 transition-all duration-300" href="#">Privacy Policy</a></li>
+<li><a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:underline decoration-1 underline-offset-4 transition-all duration-300" href="#">Terms of Service</a></li>
+<li><a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:underline decoration-1 underline-offset-4 transition-all duration-300" href="#">Sustainability</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-4 border-t border-outline-variant">
+<p class="font-body-sm text-body-sm text-secondary text-center">© 2024 Luxe Retail. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

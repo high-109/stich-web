@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Luxe Retail - Premium E-commerce</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#293040",
+                        "surface-bright": "#f9f9ff",
+                        "tertiary": "#0e3427",
+                        "on-secondary-container": "#626566",
+                        "tertiary-fixed": "#c3ecd7",
+                        "on-tertiary-fixed-variant": "#294e3f",
+                        "on-primary-fixed": "#002117",
+                        "on-primary-container": "#80bea6",
+                        "surface-variant": "#dce2f7",
+                        "on-primary": "#ffffff",
+                        "surface": "#f9f9ff",
+                        "on-tertiary-fixed": "#002115",
+                        "on-background": "#141b2b",
+                        "surface-container-high": "#e1e8fd",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#95d3ba",
+                        "surface-tint": "#2b6954",
+                        "secondary-fixed": "#e1e3e4",
+                        "surface-dim": "#d3daef",
+                        "secondary": "#5c5f60",
+                        "outline": "#707974",
+                        "surface-container": "#e9edff",
+                        "on-secondary-fixed": "#191c1d",
+                        "primary-fixed": "#b0f0d6",
+                        "primary-fixed-dim": "#95d3ba",
+                        "inverse-on-surface": "#edf0ff",
+                        "primary": "#003527",
+                        "on-primary-fixed-variant": "#0b513d",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f1f3ff",
+                        "surface-container-highest": "#dce2f7",
+                        "primary-container": "#064e3b",
+                        "background": "#f9f9ff",
+                        "secondary-fixed-dim": "#c5c7c8",
+                        "on-surface-variant": "#404944",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#274b3c",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#93baa7",
+                        "on-surface": "#141b2b",
+                        "outline-variant": "#bfc9c3",
+                        "tertiary-fixed-dim": "#a8cfbc",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#454748",
+                        "secondary-container": "#e1e3e4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "stack-md": "16px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "section-gap": "80px",
+                        "stack-lg": "32px",
+                        "margin-desktop": "64px",
+                        "stack-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "label-sm": [
+                            "Inter"
+                        ],
+                        "display-lg-mobile": [
+                            "Inter"
+                        ],
+                        "label-md": [
+                            "Inter"
+                        ],
+                        "body-lg": [
+                            "Inter"
+                        ],
+                        "headline-md": [
+                            "Inter"
+                        ],
+                        "body-md": [
+                            "Inter"
+                        ],
+                        "display-lg": [
+                            "Inter"
+                        ],
+                        "body-sm": [
+                            "Inter"
+                        ],
+                        "headline-sm": [
+                            "Inter"
+                        ]
+                    },
+                    "fontSize": {
+                        "label-sm": [
+                            "12px",
+                            {
+                                "lineHeight": "14px",
+                                "fontWeight": "500"
+                            }
+                        ],
+                        "display-lg-mobile": [
+                            "32px",
+                            {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "label-md": [
+                            "14px",
+                            {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "body-lg": [
+                            "18px",
+                            {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "headline-md": [
+                            "24px",
+                            {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "body-md": [
+                            "16px",
+                            {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "display-lg": [
+                            "48px",
+                            {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "body-sm": [
+                            "14px",
+                            {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "headline-sm": [
+                            "20px",
+                            {
+                                "lineHeight": "28px",
+                                "fontWeight": "600"
+                            }
+                        ]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+    <!-- TopNavBar -->
+    <nav
+        class="bg-surface dark:bg-inverse-surface sticky top-0 w-full z-50 border-b border-outline-variant dark:border-outline">
+        <div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+            <!-- Navigation Links (Left) -->
+            <div class="hidden md:flex items-center space-x-stack-lg">
+                <a class="text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1 font-label-md text-label-md transition-all duration-200 ease-in-out"
+                    href="#">Shop All</a>
+                <a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-md text-label-md hover:bg-surface-container-low dark:hover:bg-surface-variant duration-200 ease-in-out px-2 py-1 rounded"
+                    href="#">New Arrivals</a>
+                <a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-md text-label-md hover:bg-surface-container-low dark:hover:bg-surface-variant duration-200 ease-in-out px-2 py-1 rounded"
+                    href="#">Collections</a>
+                <a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-md text-label-md hover:bg-surface-container-low dark:hover:bg-surface-variant duration-200 ease-in-out px-2 py-1 rounded"
+                    href="#">Journal</a>
+            </div>
+            <!-- Brand Logo (Center) -->
+            <div class="flex-shrink-0 text-center">
+                <a class="text-headline-md font-headline-md tracking-tighter text-primary dark:text-primary-fixed"
+                    href="#">LUXE RETAIL</a>
+            </div>
+            <!-- Trailing Icons (Right) -->
+            <div class="flex items-center space-x-stack-md text-primary dark:text-primary-fixed">
+                <button aria-label="search"
+                    class="p-2 hover:bg-surface-container-low dark:hover:bg-surface-variant transition-all duration-200 ease-in-out rounded-full">
+                    <span class="material-symbols-outlined" data-icon="search">search</span>
+                </button>
+                <button aria-label="shopping_cart"
+                    class="p-2 hover:bg-surface-container-low dark:hover:bg-surface-variant transition-all duration-200 ease-in-out rounded-full">
+                    <span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                </button>
+                <button aria-label="person"
+                    class="p-2 hover:bg-surface-container-low dark:hover:bg-surface-variant transition-all duration-200 ease-in-out rounded-full">
+                    <span class="material-symbols-outlined" data-icon="person">person</span>
+                </button>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center text-primary">
+                <button class="p-2">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content Canvas -->
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative w-full h-[80vh] min-h-[600px] flex items-center justify-center mb-section-gap">
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover"
+                    data-alt="A striking, high-fashion editorial photograph of a minimalist, premium leather handbag resting on a polished marble pedestal. The scene is bathed in soft, high-key studio lighting that emphasizes the rich texture of the emerald green leather against a pristine white background. The aesthetic is modern, luxurious, and clean, perfectly aligning with a high-end e-commerce landing page."
+                    src="https://img.lazcdn.com/us/domino/a9dfaf8b-3594-4038-a148-a10e57272905_PK-1976-688.jpg_2200x2200q80.jpg_.avif" />
+                <div class="absolute inset-0 bg-black/20"></div> <!-- Subtle overlay for text readability -->
+            </div>
+            <div class="relative z-10 text-center text-on-primary max-w-3xl px-margin-mobile md:px-0">
+                <h1
+                    class="font-display-lg text-display-lg md:font-display-lg md:text-display-lg mb-stack-md text-white shadow-sm">
+                    Elevate Your Everyday</h1>
+                <p class="font-body-lg text-body-lg mb-stack-lg text-white/90">Discover our new collection of
+                    meticulously crafted essentials, designed for the modern minimalist.</p>
+                <button
+                    class="bg-primary-container text-on-primary px-8 py-4 rounded font-label-md text-label-md hover:bg-primary transition-colors duration-300">
+                    Explore Collection
+                </button>
+            </div>
+        </section>
+        <!-- Featured Collections (Bento Grid) -->
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap">
+            <div class="flex justify-between items-end mb-stack-lg">
+                <h2 class="font-headline-md text-headline-md text-primary">Featured Collections</h2>
+                <a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors flex items-center gap-1"
+                    href="#">
+                    View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter auto-rows-[300px] md:auto-rows-[400px]">
+                <!-- Large Feature (spans 2 cols on desktop) -->
+                <div class="md:col-span-2 relative group overflow-hidden rounded-lg cursor-pointer">
+                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="A meticulously styled flat lay of premium men's accessories, including a sleek silver watch, a dark green leather wallet, and minimalist sunglasses, arranged neatly on a crisp white surface. Soft natural light creates subtle, elegant shadows. The mood is sophisticated and organized, reflecting modern luxury and refined taste."
+                        src="https://img.drz.lazcdn.com/static/pk/p/25c2e3b68948330f41e3cf71008aafd3.jpg_400x400q80.jpg_.avif" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-stack-lg text-on-primary">
+                        <span
+                            class="font-label-sm text-label-sm uppercase tracking-widest text-surface-dim mb-2 block">New
+                            Arrival</span>
+                        <h3 class="font-headline-sm text-headline-sm mb-1 text-white">The Signature Series</h3>
+                        <p class="font-body-sm text-body-sm text-surface-bright/80 hidden md:block">Timeless designs
+                            crafted from the finest materials.</p>
+                    </div>
+                </div>
+                <!-- Small Feature 1 -->
+                <div class="relative group overflow-hidden rounded-lg cursor-pointer">
+                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="A close-up shot of a delicate, gold minimalist necklace resting on a soft, textured cream-colored fabric. The lighting is warm and inviting, highlighting the intricate details of the jewelry. The overall aesthetic is gentle, luxurious, and feminine, fitting for a premium lifestyle brand."
+                        src="https://img.drz.lazcdn.com/static/pk/p/12fb392c98ac9dd27d7117520f9728ad.jpg_200x200q80.jpg_.avif" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-stack-md text-on-primary">
+                        <h3 class="font-headline-sm text-headline-sm mb-1 text-white">Fine Jewelry</h3>
+                    </div>
+                </div>
+                <!-- Small Feature 2 -->
+                <div class="relative group overflow-hidden rounded-lg cursor-pointer">
+                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="A beautifully designed, minimalist ceramic vase holding a single, structural dry branch, set against a stark white studio background. The lighting is diffused, emphasizing the smooth matte texture of the vase and the organic lines of the branch. The mood is calm, modern, and sculptural."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzNLdVv693frxHbJ5B832nioEzPdSZFpvNw23T25gs44cCodE-o2uQd4s8QFowO3BRpzEkWHjLMRhZiilhaA6Yl87hop84si8sc-n8N2p0SgJ7mhk3GwUnp8ZTdSlKIxkxWZkecfUbspnsXx6O9Kz_9dS2dMQei3bOE7ejsf2LcsctQmq3aOS4yuFfoTpghDolNCRAT-Kskcu6l9_EHpvPeNf3paPXmg__XL3_OyAQCOC8klpS6mli" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-stack-md text-on-primary">
+                        <h3 class="font-headline-sm text-headline-sm mb-1 text-white">Home Accents</h3>
+                    </div>
+                </div>
+                <!-- Small Feature 3 (spans 2 cols on mobile, 1 on desktop to complete a 2x3 conceptual grid space if needed, adjusting layout) -->
+                <div
+                    class="md:col-span-2 relative group overflow-hidden rounded-lg cursor-pointer bg-surface-container flex items-center justify-center p-stack-lg border border-outline-variant">
+                    <div class="text-center">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-stack-sm block"
+                            data-weight="fill">loyalty</span>
+                        <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Join Luxe Rewards</h3>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant mb-stack-md">Earn points on every
+                            purchase and unlock exclusive benefits.</p>
+                        <button
+                            class="bg-transparent border border-primary text-primary px-6 py-2 rounded font-label-sm text-label-sm hover:bg-primary-container hover:text-on-primary transition-colors duration-300">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Brand Values (Minimalist Icons & Text) -->
+        <section class="bg-surface-container-low py-section-gap mb-section-gap">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+                <h2 class="font-headline-md text-headline-md text-primary mb-stack-lg">Our Commitment</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                    <!-- Value 1 -->
+                    <div class="flex flex-col items-center p-stack-md">
+                        <div
+                            class="w-16 h-16 rounded-full bg-surface-bright flex items-center justify-center mb-stack-sm shadow-sm border border-outline-variant/30">
+                            <span class="material-symbols-outlined text-primary text-3xl">compost</span>
+                        </div>
+                        <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Sustainable Materials</h3>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs text-center">We source only
+                            ethically produced, low-impact materials for a greener future.</p>
+                    </div>
+                    <!-- Value 2 -->
+                    <div class="flex flex-col items-center p-stack-md">
+                        <div
+                            class="w-16 h-16 rounded-full bg-surface-bright flex items-center justify-center mb-stack-sm shadow-sm border border-outline-variant/30">
+                            <span class="material-symbols-outlined text-primary text-3xl">verified</span>
+                        </div>
+                        <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Artisan Craftsmanship</h3>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs text-center">Every piece is
+                            meticulously constructed by skilled artisans ensuring lifelong quality.</p>
+                    </div>
+                    <!-- Value 3 -->
+                    <div class="flex flex-col items-center p-stack-md">
+                        <div
+                            class="w-16 h-16 rounded-full bg-surface-bright flex items-center justify-center mb-stack-sm shadow-sm border border-outline-variant/30">
+                            <span class="material-symbols-outlined text-primary text-3xl">local_shipping</span>
+                        </div>
+                        <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Carbon Neutral Shipping</h3>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs text-center">We offset 100%
+                            of the carbon emissions from our global delivery network.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Newsletter Signup -->
+        <section class="max-w-3xl mx-auto px-margin-mobile text-center mb-section-gap">
+            <h2 class="font-headline-md text-headline-md text-primary mb-stack-sm">Join the Inner Circle</h2>
+            <p class="font-body-md text-body-md text-secondary mb-stack-lg">Subscribe to receive early access to new
+                collections, exclusive events, and styling advice.</p>
+            <form class="flex flex-col md:flex-row gap-4 justify-center items-center max-w-xl mx-auto">
+                <input
+                    class="w-full md:w-auto flex-grow bg-surface-bright border border-outline-variant rounded px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-shadow"
+                    placeholder="Enter your email address" type="email" />
+                <button
+                    class="w-full md:w-auto whitespace-nowrap bg-primary-container text-on-primary px-8 py-3 rounded font-label-md text-label-md hover:bg-primary transition-colors duration-300 shadow-sm"
+                    type="submit">
+                    Subscribe
+                </button>
+            </form>
+            <p class="font-label-sm text-label-sm text-outline mt-4">By subscribing, you agree to our Terms of Service
+                &amp; Privacy Policy.</p>
+        </section>
+        <!-- Contact Context Section -->
+        <section class="max-w-3xl mx-auto px-margin-mobile mb-section-gap">
+            <div class="bg-surface rounded-3xl border border-surface-container-high p-8 shadow-sm">
+                <div class="mb-8 text-center">
+                    <p class="font-label-md text-label-md uppercase tracking-[0.18em] text-secondary mb-2">Contact Us</p>
+                    <h2 class="font-headline-md text-headline-md text-primary">Get in Touch</h2>
+                    <p class="font-body-md text-body-md text-secondary mt-3">Share your details and message below, and our team will follow up shortly.</p>
+                </div>
+                <form class="grid grid-cols-1 gap-6">
+                    <label class="block">
+                        <span class="font-label-md text-label-md text-on-surface mb-2 inline-block">Name</span>
+                        <input type="text" name="name" placeholder="Your full name"
+                            class="w-full bg-white border border-outline-variant rounded px-4 py-3 text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-shadow" />
+                    </label>
+                    <label class="block">
+                        <span class="font-label-md text-label-md text-on-surface mb-2 inline-block">Email</span>
+                        <input type="email" name="email" placeholder="you@example.com"
+                            class="w-full bg-white border border-outline-variant rounded px-4 py-3 text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-shadow" />
+                    </label>
+                    <label class="block">
+                        <span class="font-label-md text-label-md text-on-surface mb-2 inline-block">Phone Number</span>
+                        <input type="tel" name="phone" placeholder="(123) 456-7890"
+                            class="w-full bg-white border border-outline-variant rounded px-4 py-3 text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-shadow" />
+                    </label>
+                    <label class="block">
+                        <span class="font-label-md text-label-md text-on-surface mb-2 inline-block">Address</span>
+                        <input type="text" name="address" placeholder="Street address, city, state"
+                            class="w-full bg-white border border-outline-variant rounded px-4 py-3 text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-shadow" />
+                    </label>
+                    <label class="block">
+                        <span class="font-label-md text-label-md text-on-surface mb-2 inline-block">Message</span>
+                        <textarea name="message" rows="5" placeholder="Write your message here"
+                            class="w-full bg-white border border-outline-variant rounded px-4 py-3 text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-shadow resize-none"></textarea>
+                    </label>
+                    <button type="submit"
+                        class="w-full md:w-auto bg-primary-container text-on-primary px-8 py-3 rounded font-label-md text-label-md hover:bg-primary transition-colors duration-300 shadow-sm">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="bg-surface-container dark:bg-inverse-surface w-full mt-section-gap border-t border-surface-container-highest dark:border-surface-container-high">
+        <div class="max-w-container-max mx-auto px-margin-desktop py-16 grid grid-cols-1 md:grid-cols-4 gap-stack-lg">
+            <!-- Brand & Copyright -->
+            <div class="flex flex-col md:col-span-1">
+                <span class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed mb-4">LUXE
+                    RETAIL</span>
+                <p class="font-body-sm text-body-sm text-secondary dark:text-secondary-fixed-dim">
+                    © 2024 Luxe Retail. All rights reserved.
+                </p>
+            </div>
+            <!-- Links Column 1 -->
+            <div class="flex flex-col space-y-3">
+                <h4 class="font-label-md text-label-md text-primary dark:text-primary-fixed font-semibold mb-2">Company
+                </h4>
+                <a class="font-body-sm text-body-sm text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:underline decoration-1 underline-offset-4 transition-all duration-300"
+                    href="#">Sustainability</a>
+                <a class="font-body-sm text-body-sm text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:underline decoration-1 underline-offset-4 transition-all duration-300"
+                    href="#">Contact Us</a>
+            </div>
+            <!-- Links Column 2 -->
+            <div class="flex flex-col space-y-3">
+                <h4 class="font-label-md text-label-md text-primary dark:text-primary-fixed font-semibold mb-2">Customer
+                    Care</h4>
+                <a class="font-body-sm text-body-sm text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:underline decoration-1 underline-offset-4 transition-all duration-300"
+                    href="#">Shipping &amp; Returns</a>
+                <a class="font-body-sm text-body-sm text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:underline decoration-1 underline-offset-4 transition-all duration-300"
+                    href="#">Size Guide</a>
+            </div>
+            <!-- Links Column 3 -->
+            <div class="flex flex-col space-y-3">
+                <h4 class="font-label-md text-label-md text-primary dark:text-primary-fixed font-semibold mb-2">Legal
+                </h4>
+                <a class="font-body-sm text-body-sm text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:underline decoration-1 underline-offset-4 transition-all duration-300"
+                    href="#">Privacy Policy</a>
+                <a class="font-body-sm text-body-sm text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:underline decoration-1 underline-offset-4 transition-all duration-300"
+                    href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

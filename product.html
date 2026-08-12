@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Shopping Cart - Luxe Retail</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#293040",
+                        "surface-bright": "#f9f9ff",
+                        "tertiary": "#0e3427",
+                        "on-secondary-container": "#626566",
+                        "tertiary-fixed": "#c3ecd7",
+                        "on-tertiary-fixed-variant": "#294e3f",
+                        "on-primary-fixed": "#002117",
+                        "on-primary-container": "#80bea6",
+                        "surface-variant": "#dce2f7",
+                        "on-primary": "#ffffff",
+                        "surface": "#f9f9ff",
+                        "on-tertiary-fixed": "#002115",
+                        "on-background": "#141b2b",
+                        "surface-container-high": "#e1e8fd",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#95d3ba",
+                        "surface-tint": "#2b6954",
+                        "secondary-fixed": "#e1e3e4",
+                        "surface-dim": "#d3daef",
+                        "secondary": "#5c5f60",
+                        "outline": "#707974",
+                        "surface-container": "#e9edff",
+                        "on-secondary-fixed": "#191c1d",
+                        "primary-fixed": "#b0f0d6",
+                        "primary-fixed-dim": "#95d3ba",
+                        "inverse-on-surface": "#edf0ff",
+                        "primary": "#003527",
+                        "on-primary-fixed-variant": "#0b513d",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f1f3ff",
+                        "surface-container-highest": "#dce2f7",
+                        "primary-container": "#064e3b",
+                        "background": "#f9f9ff",
+                        "secondary-fixed-dim": "#c5c7c8",
+                        "on-surface-variant": "#404944",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#274b3c",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#93baa7",
+                        "on-surface": "#141b2b",
+                        "outline-variant": "#bfc9c3",
+                        "tertiary-fixed-dim": "#a8cfbc",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#454748",
+                        "secondary-container": "#e1e3e4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "stack-md": "16px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "section-gap": "80px",
+                        "stack-lg": "32px",
+                        "margin-desktop": "64px",
+                        "stack-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "14px", "fontWeight": "500" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col">
+    <!-- TopNavBar -->
+    <nav
+        class="bg-surface dark:bg-inverse-surface sticky top-0 w-full z-50 border-b border-outline-variant dark:border-outline">
+        <div
+            class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
+            <!-- Mobile Menu Button (Hidden on Desktop) -->
+            <button class="md:hidden text-primary dark:text-primary-fixed p-2">
+                <span class="material-symbols-outlined" data-icon="menu">menu</span>
+            </button>
+            <!-- Navigation Links (Desktop) -->
+            <ul class="hidden md:flex items-center gap-gutter">
+                <li><a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 ease-in-out"
+                        href="#">Shop All</a></li>
+                <li><a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 ease-in-out"
+                        href="#">New Arrivals</a></li>
+                <li><a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 ease-in-out"
+                        href="#">Collections</a></li>
+                <li><a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 ease-in-out"
+                        href="#">Journal</a></li>
+            </ul>
+            <!-- Brand Logo -->
+            <a class="text-headline-md font-headline-md tracking-tighter text-primary dark:text-primary-fixed uppercase mx-auto md:mx-0 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"
+                href="#">
+                LUXE RETAIL
+            </a>
+            <!-- Trailing Icons -->
+            <div class="flex items-center gap-unit">
+                <button
+                    class="p-2 text-primary dark:text-primary-fixed hover:bg-surface-container-low dark:hover:bg-surface-variant transition-all rounded-full duration-200 ease-in-out">
+                    <span class="material-symbols-outlined" data-icon="search">search</span>
+                </button>
+                <button
+                    class="p-2 text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1 hover:bg-surface-container-low dark:hover:bg-surface-variant transition-all duration-200 ease-in-out relative">
+                    <span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                    <span
+                        class="absolute top-1 right-0 bg-primary-container text-on-primary font-label-sm text-label-sm w-4 h-4 rounded-full flex items-center justify-center">2</span>
+                </button>
+                <button
+                    class="p-2 text-primary dark:text-primary-fixed hover:bg-surface-container-low dark:hover:bg-surface-variant transition-all rounded-full duration-200 ease-in-out hidden md:block">
+                    <span class="material-symbols-outlined" data-icon="person">person</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+        <h1
+            class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-stack-lg">
+            Your Cart</h1>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+            <!-- Cart Items Section -->
+            <div class="lg:col-span-8 flex flex-col gap-stack-md">
+                <!-- Cart Item 1 -->
+                <div
+                    class="flex flex-col sm:flex-row gap-gutter border border-outline-variant bg-surface-container-lowest p-stack-md rounded-DEFAULT">
+                    <div
+                        class="w-full sm:w-32 aspect-[4/5] bg-surface-variant flex-shrink-0 relative overflow-hidden rounded-sm">
+                        <img class="absolute inset-0 w-full h-full object-cover"
+                            data-alt="A high-end studio product shot of a minimalist, structured leather tote bag in deep emerald green. The lighting is soft and directional, highlighting the premium texture of the leather. The background is a stark, clean white to emphasize the product's modern, luxurious aesthetic."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA3V0_Pxuf9HTlB7v_FEl4nY49sNea5DyT3dwfwym2tB9UJRg9cFAbh-2oyk3SXxHmarCvn0928-KlYB4fRm6sE6hRchuHzNzUJsOysyQ8TcLAFZcTPKL1yDMf0uB4eDaQfiaWPr0IcN-b588ZyXbUFqmv-h9gX9IOa7nFiDIjEt2tdzfHkUJtj2xqqMpq3ASnOT-ddqzwhgmYW66uKHrTAs-m7EXyq4rT0FQqKCq8Ib0bD9YRhqMD" />
+                    </div>
+                    <div class="flex flex-col flex-grow justify-between py-unit">
+                        <div class="flex justify-between items-start gap-stack-sm">
+                            <div>
+                                <p class="font-body-sm text-body-sm text-secondary mb-unit uppercase">Accessories</p>
+                                <h3 class="font-headline-sm text-headline-sm text-on-surface">Structured Leather Tote
+                                </h3>
+                                <p class="font-body-sm text-body-sm text-secondary mt-1">Color: Emerald Green</p>
+                            </div>
+                            <p class="font-body-lg text-body-lg text-on-surface font-semibold">$450.00</p>
+                        </div>
+                        <div class="flex justify-between items-end mt-stack-md sm:mt-0">
+                            <div class="flex items-center border border-outline-variant rounded-sm h-10 w-24">
+                                <button
+                                    class="px-3 text-secondary hover:text-primary transition-colors h-full flex items-center justify-center border-r border-outline-variant">-</button>
+                                <input
+                                    class="w-full text-center font-body-md text-body-md border-none focus:ring-0 p-0 h-full bg-transparent"
+                                    min="1" type="number" value="1" />
+                                <button
+                                    class="px-3 text-secondary hover:text-primary transition-colors h-full flex items-center justify-center border-l border-outline-variant">+</button>
+                            </div>
+                            <button
+                                class="text-secondary hover:text-error transition-colors flex items-center gap-1 group">
+                                <span
+                                    class="font-label-sm text-label-sm uppercase group-hover:underline underline-offset-4 decoration-1">Remove</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cart Item 2 -->
+                <div
+                    class="flex flex-col sm:flex-row gap-gutter border border-outline-variant bg-surface-container-lowest p-stack-md rounded-DEFAULT">
+                    <div
+                        class="w-full sm:w-32 aspect-[4/5] bg-surface-variant flex-shrink-0 relative overflow-hidden rounded-sm">
+                        <img class="absolute inset-0 w-full h-full object-cover"
+                            data-alt="A close-up, high-fashion editorial shot of a sleek, minimalist silver watch with a mesh band. The watch rests on a smooth, white marble surface. Lighting is bright, clean, and creates sharp reflections on the metallic surfaces, conveying precision and premium quality."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpIUXe_SwWSn74isuibisccMDE8IZ9PhRLgKm6-1rgTkUkSIhaETpFsoe9840OhdFbUuA4pT-gxYw9GFx-vnt2XB_aQVHdIsouitOwd2C_e1UCI-hwmbuTDBKMo8WQ_ukFfsSMe_c5WlZK_BX0_nLu5OejA4xuAKYSFqOEn52XmSvlt_ALQzg_Yj4ls9JkVh6DtdvjTDzUxqQSL5EHh-Xh18Ua5gYnRAQOv7oqK2GUiIB53QJ31Pw2" />
+                    </div>
+                    <div class="flex flex-col flex-grow justify-between py-unit">
+                        <div class="flex justify-between items-start gap-stack-sm">
+                            <div>
+                                <p class="font-body-sm text-body-sm text-secondary mb-unit uppercase">Watches</p>
+                                <h3 class="font-headline-sm text-headline-sm text-on-surface">Minimalist Mesh Watch</h3>
+                                <p class="font-body-sm text-body-sm text-secondary mt-1">Color: Silver</p>
+                            </div>
+                            <p class="font-body-lg text-body-lg text-on-surface font-semibold">$225.00</p>
+                        </div>
+                        <div class="flex justify-between items-end mt-stack-md sm:mt-0">
+                            <div class="flex items-center border border-outline-variant rounded-sm h-10 w-24">
+                                <button
+                                    class="px-3 text-secondary hover:text-primary transition-colors h-full flex items-center justify-center border-r border-outline-variant">-</button>
+                                <input
+                                    class="w-full text-center font-body-md text-body-md border-none focus:ring-0 p-0 h-full bg-transparent"
+                                    min="1" type="number" value="1" />
+                                <button
+                                    class="px-3 text-secondary hover:text-primary transition-colors h-full flex items-center justify-center border-l border-outline-variant">+</button>
+                            </div>
+                            <button
+                                class="text-secondary hover:text-error transition-colors flex items-center gap-1 group">
+                                <span
+                                    class="font-label-sm text-label-sm uppercase group-hover:underline underline-offset-4 decoration-1">Remove</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Order Summary Sidebar -->
+            <div class="lg:col-span-4 mt-stack-lg lg:mt-0">
+                <div
+                    class="bg-surface-container p-gutter rounded-DEFAULT border border-outline-variant sticky top-[100px]">
+                    <h2 class="font-headline-md text-headline-md text-on-surface mb-stack-md">Order Summary</h2>
+                    <div class="space-y-stack-sm border-b border-outline-variant pb-stack-md mb-stack-md">
+                        <div class="flex justify-between font-body-md text-body-md text-on-surface">
+                            <span>Subtotal</span>
+                            <span>$675.00</span>
+                        </div>
+                        <div class="flex justify-between font-body-md text-body-md text-on-surface">
+                            <span>Shipping estimate</span>
+                            <span>Calculated at checkout</span>
+                        </div>
+                        <div class="flex justify-between font-body-md text-body-md text-on-surface">
+                            <span>Tax estimate</span>
+                            <span>$0.00</span>
+                        </div>
+                    </div>
+                    <div
+                        class="flex justify-between font-headline-sm text-headline-sm text-on-surface mb-stack-lg font-semibold">
+                        <span>Total</span>
+                        <span>$675.00</span>
+                    </div>
+                    <button
+                        class="w-full bg-primary-container text-on-primary font-label-md text-label-md uppercase h-12 rounded-DEFAULT hover:bg-primary transition-colors flex items-center justify-center">
+                        Proceed to Checkout
+                    </button>
+                    <p class="font-body-sm text-body-sm text-secondary text-center mt-stack-sm">
+                        Secure checkout powered by Luxe Retail
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Recommendations Section -->
+        <div class="mt-section-gap">
+            <h2 class="font-headline-md text-headline-md text-on-surface mb-stack-lg text-center md:text-left">You might
+                also like</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+                <!-- Rec Item 1 -->
+                <div class="group cursor-pointer">
+                    <div class="aspect-[4/5] bg-surface-variant relative overflow-hidden mb-stack-sm rounded-sm">
+                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                            data-alt="A clean, minimalist product shot of a high-end leather wallet in warm tan brown, resting on a stark white pedestal. The lighting is crisp and studio-quality, emphasizing the fine stitching and premium leather grain. The aesthetic is modern, bright, and luxurious."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmF3coPRlYRszYIiqM5LXGB2yPXLtQRugzwFpEEoYyRb28upmHAPPyxic9jY-x49ZyUleejWFS7S-VHul-c4-ErXP_C36789RRNcJeBCNl8XnIhtkgsCHPnCDyOiZRqCZDZnpC-aYHoDqPVC_1jiINC6lniQJfViWfO65ywQbLSzjrJYfxat_BGK-lN4DkT51HZEQGgkKkDgUQ2zQtokMUnMxOFGk3q7iUqNCz-zlv-Z9heRjm9aXq" />
+                        <div
+                            class="absolute inset-x-0 bottom-0 p-unit opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button
+                                class="w-full bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm py-2 border border-outline-variant hover:bg-primary-container hover:text-on-primary transition-colors">Quick
+                                Add</button>
+                        </div>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-secondary mb-1">Accessories</p>
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Classic Leather Wallet</h3>
+                    <p class="font-body-md text-body-md text-on-surface mt-1">$120.00</p>
+                </div>
+                <!-- Rec Item 2 -->
+                <div class="group cursor-pointer">
+                    <div class="aspect-[4/5] bg-surface-variant relative overflow-hidden mb-stack-sm rounded-sm">
+                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                            data-alt="A sophisticated, high-key studio photo of a minimalist black ceramic coffee cup and saucer set on a pristine white background. The soft, diffuse lighting creates elegant gradients on the curved surfaces, conveying a sense of calm, premium lifestyle design."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUviyVzACWL70xzZK8Hu3o_TOuIzEPCCKu543bEHOw9KyhebPT3ArIF9Mt_uXYGsf9SoQBXQkj7glGT5eOKnQfXkqD8QHm69nN4lxHK7NHa8xiXqQ9_ottJ7DHpJ3BHDZkQYP23IomFmQR0UnLj0jiBaqSsMxJSrRc_B9opf9EDZ7rAQHtmZi8SvjDTzD892p4cNk8qJlyNrhxYKtvmwX_JQn79Z3pt2TxUgFUDtPU5K7JQdp52W3k" />
+                        <div
+                            class="absolute inset-x-0 bottom-0 p-unit opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button
+                                class="w-full bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm py-2 border border-outline-variant hover:bg-primary-container hover:text-on-primary transition-colors">Quick
+                                Add</button>
+                        </div>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-secondary mb-1">Home</p>
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Matte Ceramic Cup Set</h3>
+                    <p class="font-body-md text-body-md text-on-surface mt-1">$45.00</p>
+                </div>
+                <!-- Rec Item 3 -->
+                <div class="group cursor-pointer hidden md:block">
+                    <div class="aspect-[4/5] bg-surface-variant relative overflow-hidden mb-stack-sm rounded-sm">
+                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                            data-alt="A modern lifestyle product image showing a sleek, silver geometric pendant necklace resting against a clean white linen fabric background. The lighting is soft and bright, emphasizing the clean lines of the jewelry and the high-quality minimalist aesthetic."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ4FlEJHtxzh_Mipf59vL76MkuDKs8asIaT-fBattVe_gxlvLuwgO6POdPJyUKx0LEcB3aqIPOhhhQ0-5jhXmA1wxz2WrbCkKghTOSRxAx1w_nQusEmzxrWo7_drbbC9lfiMcnaLh1VLaDmtDO8jFkiWyKGhBwjbC7NNY55ISc2qsXP8D7clUvUbil7TXDoeRtQKz4BjyKp4-Ip5LzqogHd1c6Km6J2ZmX6a0ql2VXtoSW49rDoSz1" />
+                        <div
+                            class="absolute inset-x-0 bottom-0 p-unit opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button
+                                class="w-full bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm py-2 border border-outline-variant hover:bg-primary-container hover:text-on-primary transition-colors">Quick
+                                Add</button>
+                        </div>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-secondary mb-1">Jewelry</p>
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Geometric Silver Pendant</h3>
+                    <p class="font-body-md text-body-md text-on-surface mt-1">$85.00</p>
+                </div>
+                <!-- Rec Item 4 -->
+                <div class="group cursor-pointer hidden md:block">
+                    <div class="aspect-[4/5] bg-surface-variant relative overflow-hidden mb-stack-sm rounded-sm">
+                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                            data-alt="A premium studio shot of a textured, minimalist canvas backpack in off-white, presented against a pure white background. The lighting highlights the subtle grain of the canvas material. The design is clean, modern, and highly structural."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBALHkTy9eKBSHh0zUMwgDb86khihKm2xlSPbyJOy3724s6oeF-46O-hn00X5Ii--reJQYGadipYEZ_RaA6x2XpEt9IRWO6rww6ywJ-Vgba2MEinKRXpXDSHKCRgeP8dAWn_aTq50_5nJpz5eTVo8MccskGXrqqMvQivqL5bR4mSSbYDfz8LlyThuytWc8PNNqD5Z8xmd_NdCdujrqL5ZV59ipCl2raAK-dq-G4bxMU6HZpgQkLzCua" />
+                        <div
+                            class="absolute inset-x-0 bottom-0 p-unit opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button
+                                class="w-full bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm py-2 border border-outline-variant hover:bg-primary-container hover:text-on-primary transition-colors">Quick
+                                Add</button>
+                        </div>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-secondary mb-1">Bags</p>
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Canvas Daypack</h3>
+                    <p class="font-body-md text-body-md text-on-surface mt-1">$150.00</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="bg-surface-container dark:bg-inverse-surface w-full mt-section-gap border-t border-surface-container-highest dark:border-surface-container-high">
+        <div class="max-w-container-max mx-auto px-margin-desktop py-16 grid grid-cols-1 md:grid-cols-4 gap-stack-lg">
+            <div class="md:col-span-1">
+                <h3
+                    class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed mb-stack-md uppercase">
+                    LUXE RETAIL</h3>
+                <p class="font-body-sm text-body-sm text-secondary dark:text-secondary-fixed-dim">
+                    Modern minimalist goods for the discerning individual.
+                </p>
+            </div>
+            <div class="md:col-span-3 grid grid-cols-2 sm:grid-cols-3 gap-gutter">
+                <div>
+                    <ul class="space-y-stack-sm">
+                        <li><a class="font-body-sm text-body-sm text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:underline decoration-1 underline-offset-4 transition-all duration-300"
+                                href="#">Sustainability</a></li>
+                        <li><a class="font-body-sm text-body-sm text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:underline decoration-1 underline-offset-4 transition-all duration-300"
+                                href="#">Shipping &amp; Returns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-stack-sm">
+                        <li><a class="font-body-sm text-body-sm text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:underline decoration-1 underline-offset-4 transition-all duration-300"
+                                href="#">Privacy Policy</a></li>
+                        <li><a class="font-body-sm text-body-sm text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:underline decoration-1 underline-offset-4 transition-all duration-300"
+                                href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-stack-sm">
+                        <li><a class="font-body-sm text-body-sm text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:underline decoration-1 underline-offset-4 transition-all duration-300"
+                                href="#">Contact Us</a></li>
+                        <li><a class="font-body-sm text-body-sm text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:underline decoration-1 underline-offset-4 transition-all duration-300"
+                                href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="md:col-span-4 mt-stack-lg pt-stack-lg border-t border-outline-variant/30 text-center md:text-left">
+                <p class="font-body-sm text-body-sm text-secondary dark:text-secondary-fixed-dim">© 2024 Luxe Retail.
+                    All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
